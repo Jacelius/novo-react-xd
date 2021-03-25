@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "react-promise": "^3.0.2",
+    "regenerator-runtime": "^0.13.7",
     "yarn": "^1.22.10"
   },
   "description": ""

@@ -13,7 +13,6 @@ class DepartmentButton extends Component {
             <div>
                 <Button> Department {this.props.departmentId} </Button>
             </div>
-            
         );
     }
 }
