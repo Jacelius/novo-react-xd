@@ -1,0 +1,6 @@
+black
+ipython
+jupyter
+yawsso
+
+-r azure.txt

@@ -1,0 +1,24 @@
+{
+    "account_name": "AWS-NN-CMC_MD",
+    "default_region": "eu-central-1",
+    "env": {
+        "prd": {
+            "account": "260308170780",
+            "alb": "AlbApi/6e79a4b617ae34b6",
+            "ui_bucket": "nn-cmcmd-prd-ui",
+            "vpc": "vpc-0524ac5eff215b888"
+        },
+        "dev": {
+            "account": "582985587312",
+            "alb": "AlbApi/c33540a1b69bef65",
+            "ui_bucket": "nn-cmcmd-dev-ui",
+            "vpc": "vpc-0455537c63632cc3f"
+        },
+        "tst": {
+            "account": "328229050256",
+            "alb": "AlbApi/7bd0a5296198a379",
+            "ui_bucket": "nn-cmcmd-tst-ui",
+            "vpc": "vpc-08ef0fd02477ce9bd"
+        }
+    }
+}

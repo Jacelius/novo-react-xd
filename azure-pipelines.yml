@@ -1,0 +1,79 @@
+---
+# pull request trigger and push trigger for master/dev
+pr:
+  - master
+  - dev
+trigger:
+  - master
+  - dev
+
+pool:
+  vmImage: ubuntu-20.04
+
+variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+  PIP_CACHE_DIR: $(Pipeline.Workspace)/.pip
+  regionName: eu-central-1
+  ${{if notIn(variables['build.sourceBranchName'], 'dev', 'master')}}:
+    awsCredentials: AWS-NN-CMC_MD-TST
+  ${{if eq(variables['build.sourceBranchName'], 'dev')}}:
+    awsCredentials: AWS-NN-CMC_MD-DEV
+  ${{if eq(variables['build.sourceBranchName'], 'master')}}:
+    awsCredentials: AWS-NN-CMC_MD-PRD
+
+jobs:
+  - job: build_and_deploy_react
+    displayName: Build and Deploy React application
+    steps:
+
+      # Package Cache
+      - task: Cache@2
+        inputs:
+          key: python | $(Agent.OS)
+          restoreKeys: |
+            python | $(Agent.OS)
+            python
+          path: $(PIP_CACHE_DIR)
+        displayName: Cache pip download cache
+      - task: Cache@2
+        inputs:
+          key: npm | $(Agent.OS) | "$(npm_config_cache)/package.json"
+          restoreKeys: npm | $(Agent.OS)
+          path: $(npm_config_cache)
+        displayName: Cache npm
+
+      # Dependencies
+      - task: UsePythonVersion@0
+        displayName: Python install
+        inputs:
+          versionSpec: '3.8'
+          architecture: x64
+      - task: NodeTool@0
+        displayName: Node.js install
+        inputs:
+          versionSpec: '12.18.4'
+      # package install
+      - script: pip install invoke
+        displayName: Setup Python invoke for task execution
+      - script: inv setup --azure-env
+        displayName: Setup CI/CD environment
+      # CI
+      #- script: inv dev --lint
+      #  displayName: Run CI linter
+
+      # CD
+      # build app
+      - script: inv build
+        displayName: Build React frontend
+      # aws
+      - task: AWSShellScript@1
+        displayName: Deploy resources to ${{ variables.awsCredentials }}
+        inputs:
+          awsCredentials: ${{variables.awsCredentials}}
+          regionName: ${{ variables.regionName }}
+          scriptType: inline
+          inlineScript: |
+            inv deploy --azure-env \
+                --build-branch '$(build.sourceBranchName)' \
+                --source-branch '$(system.pullRequest.sourceBranch)' \
+                --repo '$(build.repository.name)'
