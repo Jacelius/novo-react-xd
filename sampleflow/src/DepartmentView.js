@@ -8,6 +8,7 @@ import LevelText from "./LevelText.js";
 import "./style.css";
 import ButtonSearch from "./ButtonSearch.js";
 
+
 class DepartmentView extends Component {
   constructor(props) {
     super(props);
@@ -39,12 +40,8 @@ class DepartmentView extends Component {
   }
 }
 
-function fetchSecurityDeps() {
-  fetch("http://localhost:5000/api/SecurityDeps", {
-    mode: 'no-cors'
-  })
-    .then(response => console.log(response.json()));
-          // let sec_dep1 = json[0]; // { name:"4355", "teams":{} }
+
+// let sec_dep1 = json[0]; // { name:"4355", "teams":{} }
           /*
           var buttons = [];
 
@@ -55,9 +52,10 @@ function fetchSecurityDeps() {
       
           return buttons
           */
-  
-} 
-
-
 
 ReactDOM.render(<DepartmentView/>, document.getElementById("root"));
+
+function fetchSecurityDeps() {
+  fetch('https://localhost:5001/api/securitydeps')
+        .then(response => console.log(response.json()));
+};
