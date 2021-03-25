@@ -40,23 +40,23 @@ class DepartmentView extends Component {
 }
 
 function fetchSecurityDeps() {
-  const data = fetch("localhost:5000/api/SecurityDeps")
-  if (data.status === 200) { // success
-      let json = data.json() // [{name:"4355", "teams":{}}, name:"0420", "teams":{}]
+  fetch("http://localhost:5000/api/SecurityDeps", {
+    mode: 'no-cors'
+  })
+    .then(response => console.log(response.json()));
+          // let sec_dep1 = json[0]; // { name:"4355", "teams":{} }
+          /*
+          var buttons = [];
 
-      // let sec_dep1 = json[0]; // { name:"4355", "teams":{} }
-
-      var buttons = [];
-
-      for (let i = 0; i < json.length; i++) {
-        const sec_dep = json[i];
-        buttons.push(<DepartmentButton departmentId={sec_dep.name} teams={sec_dep.teams}></DepartmentButton>);
-      }
-
-      return buttons
-  }
-  else return null; 
-}
+          for (let i = 0; i < json.length; i++) {
+            const sec_dep = json[i];
+            buttons.push(<DepartmentButton departmentId={sec_dep.name} teams={sec_dep.teams}></DepartmentButton>);
+          }
+      
+          return buttons
+          */
+  
+} 
 
 
 
