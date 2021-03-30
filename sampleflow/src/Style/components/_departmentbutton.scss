@@ -1,0 +1,26 @@
+.App {
+    .department-view {
+        height: $component-height;
+        padding: $side-padding;
+        @include FlexCenter();
+        .department-view-button {
+            margin: 1rem;
+            padding: 1rem;
+            height: 7.5rem;
+            width: 15rem;
+            background-color: rgb(17, 112, 255);
+            transition: all .2s ease;
+            cursor: pointer;
+            border-radius: 5px;
+            @include FlexCenter();
+            &:hover {
+                background-color: $darkblue;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                font-size: 24px;
+            }
+        }
+    }
+}

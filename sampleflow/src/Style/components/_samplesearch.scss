@@ -1,0 +1,13 @@
+.App {
+    .search-button {
+        z-index: 100;
+        position: absolute;
+        padding: $side-padding;
+        right: 0;
+        top: calc(#{$header-height} + 1rem);
+        img {
+            height: 3rem;
+            cursor: pointer;
+        }
+    }
+}

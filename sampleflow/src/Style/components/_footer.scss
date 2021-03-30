@@ -1,0 +1,21 @@
+.App {
+    .footer {
+        z-index: 999;
+        background: $nice-white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: $footer-height;
+        border-top: 2px solid grey;
+        @include FlexCenter();
+        .footer-nav {
+            width: 100%;
+            padding: $side-padding;
+            p {
+                color: black;
+            }
+        }
+    }
+}

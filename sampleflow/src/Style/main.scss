@@ -1,11 +1,15 @@
 @import "base/colors.scss",
+        "base/mixins",
         "base/reset.scss",
         "base/size.scss",
         "base/typography.scss"
 ;
 
-@import "components/mixins",
-        "components/header"
+@import "components/header",
+        "components/footer",
+        "components/samplesearch",
+        "components/departmentbutton",
+        "components/teambutton"
 ;
 
 @import "pages/index"

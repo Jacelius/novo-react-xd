@@ -9,13 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "react-promise": "^3.0.2",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
     "sass": "^1.32.8",
     "scss": "^0.2.4",
+    "web-vitals": "^1.1.1",
     "yarn": "^1.22.10"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
 }

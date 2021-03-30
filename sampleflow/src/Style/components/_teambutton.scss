@@ -1,0 +1,18 @@
+.App {
+    .teams {
+        height: $component-height;
+        @include FlexCenter();
+        .teams-view-button {
+            padding: 1rem;
+            margin: 1rem;
+            @include FlexCenter();
+            flex-direction: column;
+            h1 {
+                color: black;
+            }
+            p {
+                color: black;
+            }
+        }
+    }
+}

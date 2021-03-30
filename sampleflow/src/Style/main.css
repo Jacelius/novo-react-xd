@@ -23,7 +23,8 @@
   src: url("../assets/fonts/Apis-Light.ttf") format("truetype");
 }
 
-.header {
+.App .header {
+  z-index: 1000;
   padding: 0 2rem;
   background-color: #001965;
   height: 10vh;
@@ -36,13 +37,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.header .main-nav {
+.App .header .main-nav {
   width: 100%;
 }
 
-.header .main-nav ul {
+.App .header .main-nav ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,11 +61,148 @@
           align-items: center;
 }
 
-.header .main-nav ul h1 {
+.App .header .main-nav ul h1 {
   color: white;
 }
 
-.header .main-nav ul img {
-  height: calc(10vh / 1.8);
+.App .header .main-nav ul img {
+  height: calc(10vh / 1.5);
+}
+
+.App .footer {
+  z-index: 999;
+  background: #f2f2f2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4vh;
+  border-top: 2px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .footer .footer-nav {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.App .footer .footer-nav p {
+  color: black;
+}
+
+.App .search-button {
+  z-index: 100;
+  position: absolute;
+  padding: 0 2rem;
+  right: 0;
+  top: calc(10vh + 1rem);
+}
+
+.App .search-button img {
+  height: 3rem;
+  cursor: pointer;
+}
+
+.App .department-view {
+  height: calc(100vh - (14vh));
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .department-view .department-view-button {
+  margin: 1rem;
+  padding: 1rem;
+  height: 7.5rem;
+  width: 15rem;
+  background-color: #1170ff;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  cursor: pointer;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .department-view .department-view-button:hover {
+  background-color: #001965;
+}
+
+.App .department-view .department-view-button h1 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.App .teams {
+  height: calc(100vh - (14vh));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .teams .teams-view-button {
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .teams .teams-view-button h1 {
+  color: black;
+}
+
+.App .teams .teams-view-button p {
+  color: black;
+}
+
+#root {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+#root .App {
+  height: 100%;
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=main.css.map */
