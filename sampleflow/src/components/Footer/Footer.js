@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Footer() {
-    return (
-        <div className="footer">
-            <nav className="footer-nav">
-                <p>C19 / 433</p>
-            </nav>
-        </div>
-    );
+class Footer extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="footer">
+                <nav className="footer-nav">
+                    <p>C19 {this.props.department} {this.props.team}</p>
+                </nav>
+            </div>
+        );
+    }
 }
 
 export default Footer;

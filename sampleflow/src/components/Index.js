@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //Component imports
 import Header from './Header/Header';
 import SampleSearch from './components/SampleSearch';
-import Footer from './Footer/Footer';
 
 //Pages imports
 import FirstLevel from './FirstLevel';
@@ -23,7 +22,6 @@ function Index() {
                     <Route path="/SecondLevel/:name" component={SecondLevelDetails}/>
                     <Route path="/about" component={ About } />
                 </Switch>
-                <Footer />
             </div>
         </Router>
     );

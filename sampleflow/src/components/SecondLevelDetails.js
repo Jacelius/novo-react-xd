@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'regenerator-runtime';
 
+import Footer from './Footer/Footer';
 import TeamButton from './components/TeamButton';
 
 class SecondLevelDetails extends Component {
@@ -27,7 +28,9 @@ class SecondLevelDetails extends Component {
                                 methods={teams.methods.length}
                     />
                 ))}
+                <Footer department={this.props.match.params.name}/>
             </div>
+            
         );
     }
 }

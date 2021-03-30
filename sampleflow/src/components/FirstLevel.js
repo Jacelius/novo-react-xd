@@ -1,6 +1,7 @@
 import React, { useState, Component } from 'react';
 import 'regenerator-runtime';
 
+import Footer from './Footer/Footer';
 import DepartmentButton from './components/DepartmentButton';
 
 class FirstLevel extends Component {
@@ -27,6 +28,7 @@ class FirstLevel extends Component {
                                       url={`./SecondLevel/${departments.name}`}                  
                     />
                 ))}
+                <Footer />
             </div>
         );
     }
