@@ -1,4 +1,19 @@
-.main-nav {
-    min-height: 10vh;
-    background-color: blue;
+.header {
+    padding: 0 2rem;
+    background-color: $darkblue;
+    height: 10vh;
+    @include FlexCenter();
+    .main-nav {
+        width: 100%;
+        ul {
+            width: 100%;
+            @include FlexBetween();
+            h1 {
+                color: $white;
+            }
+            img {
+                height: calc(#{$nav-height} / 1.8);
+            }
+        }
+    }   
 }

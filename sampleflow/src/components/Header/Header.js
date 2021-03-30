@@ -1,16 +1,22 @@
 import React from 'react';
-import '../../Style/main.css';
+import { Link } from 'react-router-dom';
+
 import Logo from '../../assets/img/nn_logo_rgb_white.svg';
 
 function Header() {
   return (
+    <div className="header">
     <nav className="main-nav">
       <ul>
-        <li>Hello</li>
-        <li>One</li>
-        <li>Two</li>
+        <Link to="/">
+          <h1 className="title">Sampleflow Analytics</h1>
+        </Link>
+        <Link to="/">
+          <img className="logo" src={Logo}/>
+        </Link>
       </ul>
     </nav>
+    </div>
   );
 }
 

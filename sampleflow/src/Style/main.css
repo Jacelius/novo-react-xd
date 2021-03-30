@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
   font-family: apis-regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,8 +23,43 @@
   src: url("../assets/fonts/Apis-Light.ttf") format("truetype");
 }
 
-.main-nav {
-  min-height: 10vh;
-  background-color: blue;
+.header {
+  padding: 0 2rem;
+  background-color: #001965;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .main-nav {
+  width: 100%;
+}
+
+.header .main-nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .main-nav ul h1 {
+  color: white;
+}
+
+.header .main-nav ul img {
+  height: calc(10vh / 1.8);
 }
 /*# sourceMappingURL=main.css.map */
