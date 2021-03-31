@@ -1,0 +1,19 @@
+.App {
+    .component-teamsview {
+        @include PageInitialize();
+        @include FlexEven();
+        flex-direction: column;
+        .team-method-components {
+            @include FlexCenter();
+            div {
+                @include FlexCenter();
+                flex-direction: column
+            }
+        }
+        .department-main {
+            @include FlexBetween();
+            flex-direction: column;
+            height: 15rem;
+        }
+    }
+}

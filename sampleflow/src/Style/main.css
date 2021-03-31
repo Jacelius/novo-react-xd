@@ -112,21 +112,7 @@
   cursor: pointer;
 }
 
-.App .department-view {
-  height: calc(100vh - (14vh));
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.App .department-view .department-view-button {
+.department-button {
   margin: 1rem;
   padding: 1rem;
   height: 7.5rem;
@@ -147,32 +133,18 @@
           align-items: center;
 }
 
-.App .department-view .department-view-button:hover {
+.department-button:hover {
   background-color: #001965;
 }
 
-.App .department-view .department-view-button h1 {
+.department-button h1 {
   text-align: center;
   color: white;
   font-size: 24px;
 }
 
-.App .teams {
-  height: calc(100vh - (14vh));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.App .teams .teams-view-button {
-  padding: 1rem;
-  margin: 1rem;
+.team-button {
+  padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,12 +160,19 @@
           flex-direction: column;
 }
 
-.App .teams .teams-view-button h1 {
+.team-button h1 {
   color: black;
 }
 
-.App .teams .teams-view-button p {
+.team-button p {
   color: black;
+}
+
+.anchor-point {
+  height: .25rem;
+  width: .25rem;
+  border-radius: 50%;
+  background: black;
 }
 
 #root {
@@ -204,5 +183,80 @@
 #root .App {
   height: 100%;
   background-color: #f2f2f2;
+}
+
+#root .App .department-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - (14vh));
+}
+
+.App .component-teamsview {
+  height: calc(100vh - (14vh));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .component-teamsview .team-method-components {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .component-teamsview .team-method-components div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .component-teamsview .department-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 15rem;
 }
 /*# sourceMappingURL=main.css.map */

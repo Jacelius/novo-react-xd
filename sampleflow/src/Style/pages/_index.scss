@@ -4,5 +4,9 @@
     .App {
         height: 100%;
         background-color: $nice-white;
+        .department-view {
+            @include FlexCenter();
+            @include PageInitialize();
+        }
     }   
 }

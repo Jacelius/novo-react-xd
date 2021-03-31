@@ -9,7 +9,7 @@ import SampleSearch from './components/SampleSearch';
 //Pages imports
 import FirstLevel from './FirstLevel';
 import SecondLevelDetails from './SecondLevelDetails';
-import About from './About';
+import ThirdLevel from './ThirdLevelDetails';
 
 function Index() {
     return (
@@ -18,9 +18,9 @@ function Index() {
                 <Header />
                 <SampleSearch />
                 <Switch>
-                    <Route path="/" exact component={ FirstLevel }/>
-                    <Route path="/SecondLevel/:name" component={SecondLevelDetails}/>
-                    <Route path="/about" component={ About } />
+                    <Route path="/" exact component={ FirstLevel } />
+                    <Route path="/:name" component={ SecondLevelDetails } />
+                    <Route path="/thirdLevel/:team" component={ ThirdLevel } />
                 </Switch>
             </div>
         </Router>

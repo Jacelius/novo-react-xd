@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import AnchorPoint from './AnchorPoint';
 
-class DepartmentView extends Component {
+export default class TeamButton extends Component {
     render() {
         return (
             <Link to={this.props.url}>
-            <div className="teams-view-button">
-                <h1>Team {this.props.teamName}</h1>
-                <p>Methods: {this.props.methods}</p>
-            </div>
+                <div className="team-button">
+                    <h1>Team {this.props.teamName}</h1>
+                    <p>Methods: {this.props.methods}</p>
+                    {/* <AnchorPoint /> */}
+                </div>
             </Link>
         );
     }
 };
-
-export default DepartmentView;

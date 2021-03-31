@@ -4,7 +4,7 @@ import 'regenerator-runtime';
 import Footer from './Footer/Footer';
 import DepartmentButton from './components/DepartmentButton';
 
-class FirstLevel extends Component {
+export default class FirstLevel extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,7 +25,7 @@ class FirstLevel extends Component {
                 {this.state.departmentTeams.map(departments => (
                     <DepartmentButton key={departments.name} 
                                       departmentName={departments.name}
-                                      url={`./SecondLevel/${departments.name}`}                  
+                                      url={departments.name}                  
                     />
                 ))}
                 <Footer />
@@ -33,5 +33,3 @@ class FirstLevel extends Component {
         );
     }
 }
-
-export default FirstLevel;
