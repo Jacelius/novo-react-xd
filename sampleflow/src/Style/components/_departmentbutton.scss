@@ -6,6 +6,7 @@
     background-color: rgb(17, 112, 255);
     transition: all .2s ease;
     cursor: pointer;
+    z-index: 10;
     border-radius: 5px;
     @include FlexCenter();
     &:hover {

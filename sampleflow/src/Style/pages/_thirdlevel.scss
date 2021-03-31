@@ -5,12 +5,18 @@
         flex-direction: column;
         .team-method-components {
             @include FlexCenter();
+            flex-wrap: wrap;
+            z-index: 10;
             div {
                 @include FlexCenter();
-                flex-direction: column
+                flex-direction: column;      
+                .anchor-point {
+                    transform: translateY(-1rem);
+                }          
             }
         }
         .department-main {
+            z-index: 10;
             @include FlexBetween();
             flex-direction: column;
             height: 15rem;

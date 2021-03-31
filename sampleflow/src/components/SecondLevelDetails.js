@@ -62,7 +62,7 @@ export default class SecondLevelDetails extends Component {
                             borderColor="rgb(0,25,101)"
                             borderWidth={2}
                             zIndex={0}
-                            delay={1}
+                            // delay={1}
                     />
                     {/* Draws line from each team method to the department anchor */}
                     {
@@ -71,11 +71,10 @@ export default class SecondLevelDetails extends Component {
                             <LineTo from="a"
                                     to={item.toString()}
                                     fromAnchor="left"
-                                    toAnchor="right"
+                                    toAnchor="25% 25%"
                                     borderColor="rgb(0,25,101)"
                                     borderWidth={2}
-                                    zIndex={0}
-                                    delay={1}
+                                    // delay={1}
                             />  
                             ))
                         ))
@@ -87,14 +86,4 @@ export default class SecondLevelDetails extends Component {
             
         );
     }
-}
-
-function DisplayLines(anchor) {
-    <LineTo from="a" 
-            to={anchor}
-            fromAnchor="0% 50%"
-            borderColor="rgb(0,25,101)"
-            borderWidth={2}
-            delay={1}
-    />
 }

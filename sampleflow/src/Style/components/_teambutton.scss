@@ -2,10 +2,9 @@
     padding: 1rem 2rem;
     @include FlexCenter();
     flex-direction: column;
-    h1 {
+    h1, p {
+        text-align: center;
         color: black;
-    }
-    p {
-        color: black;
+        z-index: 10;
     }
 }

@@ -121,6 +121,7 @@
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   cursor: pointer;
+  z-index: 10;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,12 +161,10 @@
           flex-direction: column;
 }
 
-.team-button h1 {
+.team-button h1, .team-button p {
+  text-align: center;
   color: black;
-}
-
-.team-button p {
-  color: black;
+  z-index: 10;
 }
 
 .anchor-point {
@@ -225,6 +224,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 10;
 }
 
 .App .component-teamsview .team-method-components div {
@@ -243,7 +245,13 @@
           flex-direction: column;
 }
 
+.App .component-teamsview .team-method-components div .anchor-point {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
 .App .component-teamsview .department-main {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
